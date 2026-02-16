@@ -40,13 +40,13 @@ export default function Home() {
           <article
             key={card.name}
             className={[
-              "relative flex h-[430px] w-[258px] flex-col overflow-hidden rounded-[34px] px-3 pb-3 pt-3 shadow-[0_24px_30px_rgba(0,0,0,0.15)]",
+              "relative flex h-[414px] w-[280px] flex-col overflow-hidden rounded-[34px] px-3 pb-3 pt-3 shadow-[0_24px_30px_rgba(0,0,0,0.15)]",
               card.dark ? "bg-[#111214] text-white" : "bg-[#f5f5f5] text-[#222]",
             ].join(" ")}
           >
             <div
               className={[
-                "relative h-[98px] overflow-visible rounded-[22px]",
+                "relative h-[112px] overflow-visible rounded-[22px]",
                 card.dark
                   ? "bg-[radial-gradient(circle_at_15%_20%,#34559f,transparent_45%),radial-gradient(circle_at_75%_-20%,#ffb235,transparent_50%),linear-gradient(130deg,#1a2b55_25%,#2f3f8d_45%,#5d2ea5_70%,#15395f_100%)]"
                   : "bg-[radial-gradient(circle_at_20%_85%,#21366c,transparent_35%),radial-gradient(circle_at_52%_10%,#ffec7f,transparent_30%),radial-gradient(circle_at_75%_45%,#ff9f2a,transparent_45%),linear-gradient(120deg,#001a55_6%,#de5f28_52%,#f5d46b_95%)]",
