@@ -41,7 +41,7 @@ export default function Home() {
           <article
             key={card.name}
             className={[
-              "relative flex h-[490px] w-[330px] flex-col overflow-hidden rounded-[40px] px-4 pb-4 pt-4 shadow-[0_24px_30px_rgba(0,0,0,0.15)]",
+              "relative flex h-[458px] w-[330px] flex-col overflow-hidden rounded-[40px] px-4 pb-3 pt-4 shadow-[0_24px_30px_rgba(0,0,0,0.15)]",
               card.dark ? "bg-[#111214] text-white" : "bg-[#f5f5f5] text-[#222]",
             ].join(" ")}
           >
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex flex-1 flex-col px-2 pt-10">
+            <div className="relative flex flex-1 flex-col px-2 pt-9">
               <div
                 className={[
                   "absolute -top-10 left-2 h-16 w-16 overflow-hidden rounded-full border-2",
@@ -108,7 +108,7 @@ export default function Home() {
                 {card.role}
               </p>
 
-              <div className="mt-6 grid grid-cols-3 gap-3">
+              <div className="mt-5 grid grid-cols-3 gap-3">
                 <div className="text-center">
                   <p className="text-[20px] font-semibold">
                     <FontAwesomeIcon
