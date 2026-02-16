@@ -81,7 +81,7 @@ export default function Home() {
               <button
                 type="button"
                 className={[
-                  "absolute right-1 top-2 grid h-9 w-9 place-items-center rounded-full text-xs",
+                  "absolute right-1 top-9 grid h-9 w-9 place-items-center rounded-full text-xs",
                   card.dark
                     ? "border border-white/10 bg-white/5 text-white/80"
                     : "border border-black/10 bg-black/5 text-black/40",
@@ -91,7 +91,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faBookmarkRegular} className="text-[15px]" />
               </button>
 
-              <h2 className="min-h-[34px] whitespace-nowrap text-[24px] leading-6 font-semibold tracking-[-0.01em]">
+              <h2 className="min-h-[34px] pr-12 whitespace-nowrap text-[24px] leading-6 font-semibold tracking-[-0.01em]">
                 {card.name}
               </h2>
               <p
