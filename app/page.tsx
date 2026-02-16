@@ -1,10 +1,10 @@
 import { faBookmark as faBookmarkRegular } from "@fortawesome/free-regular-svg-icons";
 import {
-  faCalendarDays,
-  faCode,
-  faDollarSign,
+  faBox,
+  faClock,
+  faFlag,
+  faGem,
   faPaperPlane,
-  faPenRuler,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,8 @@ export default function Home() {
       name: "Liam O'Connor",
       role: "Visual Artist",
       tool: "Things",
-      toolIcon: faCode,
+      toolIcon: faBox,
+      toolIconColor: "text-[#60a5fa]",
       price: "$99",
       months: "12",
       dark: true,
@@ -24,7 +25,8 @@ export default function Home() {
       name: "Alex Turner",
       role: "Creative Director",
       tool: "Sketch",
-      toolIcon: faPenRuler,
+      toolIcon: faGem,
+      toolIconColor: "text-[#fbbf24]",
       price: "$150",
       months: "24",
       dark: false,
@@ -38,7 +40,7 @@ export default function Home() {
           <article
             key={card.name}
             className={[
-              "relative flex h-[430px] w-[258px] flex-col overflow-hidden rounded-[34px] p-4 pb-4 shadow-[0_24px_30px_rgba(0,0,0,0.15)]",
+              "relative flex h-[430px] w-[258px] flex-col overflow-hidden rounded-[34px] px-3 pb-3 pt-3 shadow-[0_24px_30px_rgba(0,0,0,0.15)]",
               card.dark ? "bg-[#111214] text-white" : "bg-[#f5f5f5] text-[#222]",
             ].join(" ")}
           >
@@ -58,12 +60,15 @@ export default function Home() {
                     : "bg-[#fff5e6] text-[#444]",
                 ].join(" ")}
               >
-                <FontAwesomeIcon icon={card.toolIcon} className="text-[12px]" />
+                <FontAwesomeIcon
+                  icon={card.toolIcon}
+                  className={["text-[12px]", card.toolIconColor].join(" ")}
+                />
                 <span>{card.tool}</span>
               </div>
             </div>
 
-            <div className="relative flex flex-1 flex-col px-2 pt-7">
+            <div className="relative flex flex-1 flex-col px-1 pt-7">
               <div
                 className={[
                   "absolute -top-8 left-2 h-12 w-12 rounded-full border-2",
@@ -86,7 +91,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faBookmarkRegular} className="text-[15px]" />
               </button>
 
-              <h2 className="min-h-[64px] text-[32px] leading-8 font-semibold tracking-[-0.01em]">
+              <h2 className="min-h-[40px] whitespace-nowrap text-[32px] leading-8 font-semibold tracking-[-0.01em]">
                 {card.name}
               </h2>
               <p
@@ -119,7 +124,7 @@ export default function Home() {
                 <div className="text-center">
                   <p className="text-[18px] font-semibold">
                     <FontAwesomeIcon
-                      icon={faDollarSign}
+                      icon={faFlag}
                       className="mr-1 text-[15px] text-[#3b82f6]"
                     />
                     {card.price}
@@ -136,7 +141,7 @@ export default function Home() {
                 <div className="text-center">
                   <p className="text-[18px] font-semibold">
                     <FontAwesomeIcon
-                      icon={faCalendarDays}
+                      icon={faClock}
                       className="mr-1 text-[15px] text-[#8b5cf6]"
                     />
                     {card.months}
