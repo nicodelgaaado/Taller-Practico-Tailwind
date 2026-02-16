@@ -1,9 +1,21 @@
+import { faBookmark as faBookmarkRegular } from "@fortawesome/free-regular-svg-icons";
+import {
+  faCalendarDays,
+  faCode,
+  faDollarSign,
+  faPaperPlane,
+  faPenRuler,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Home() {
   const cards = [
     {
       name: "Liam O'Connor",
       role: "Visual Artist",
       tool: "Things",
+      toolIcon: faCode,
       price: "$99",
       months: "12",
       dark: true,
@@ -12,6 +24,7 @@ export default function Home() {
       name: "Alex Turner",
       role: "Creative Director",
       tool: "Sketch",
+      toolIcon: faPenRuler,
       price: "$150",
       months: "24",
       dark: false,
@@ -45,7 +58,7 @@ export default function Home() {
                     : "bg-[#fff5e6] text-[#444]",
                 ].join(" ")}
               >
-                <span>{card.dark ? "[x]" : "<>"}</span>
+                <FontAwesomeIcon icon={card.toolIcon} className="text-[12px]" />
                 <span>{card.tool}</span>
               </div>
             </div>
@@ -70,7 +83,7 @@ export default function Home() {
                 ].join(" ")}
                 aria-label="Bookmark profile"
               >
-                [*]
+                <FontAwesomeIcon icon={faBookmarkRegular} className="text-[15px]" />
               </button>
 
               <h2 className="min-h-[64px] text-[32px] leading-8 font-semibold tracking-[-0.01em]">
@@ -88,7 +101,11 @@ export default function Home() {
               <div className="mt-5 grid grid-cols-3 gap-2">
                 <div className="text-center">
                   <p className="text-[18px] font-semibold">
-                    <span className="mr-1 text-[#ffcf33]">*</span>5.0
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="mr-1 text-[15px] text-[#ffcf33]"
+                    />
+                    5.0
                   </p>
                   <p
                     className={[
@@ -101,7 +118,10 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <p className="text-[18px] font-semibold">
-                    <span className="mr-1 text-[#3b82f6]">P</span>
+                    <FontAwesomeIcon
+                      icon={faDollarSign}
+                      className="mr-1 text-[15px] text-[#3b82f6]"
+                    />
                     {card.price}
                   </p>
                   <p
@@ -115,7 +135,10 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <p className="text-[18px] font-semibold">
-                    <span className="mr-1 text-[#8b5cf6]">O</span>
+                    <FontAwesomeIcon
+                      icon={faCalendarDays}
+                      className="mr-1 text-[15px] text-[#8b5cf6]"
+                    />
                     {card.months}
                   </p>
                   <p
@@ -132,12 +155,13 @@ export default function Home() {
               <button
                 type="button"
                 className={[
-                  "mt-auto h-12 w-full rounded-full text-[18px] font-semibold",
+                  "mt-auto flex h-12 w-full items-center justify-center gap-2 rounded-full text-[18px] font-semibold",
                   card.dark
                     ? "bg-[#3987f5] text-white"
                     : "border border-black/10 bg-transparent text-black/75",
                 ].join(" ")}
               >
+                <FontAwesomeIcon icon={faPaperPlane} className="text-[15px]" />
                 Get In Touch
               </button>
             </div>
