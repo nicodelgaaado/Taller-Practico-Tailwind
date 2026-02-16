@@ -4,7 +4,6 @@ import {
   faClock,
   faFlag,
   faGem,
-  faPaperPlane,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -73,7 +72,7 @@ export default function Home() {
             <div className="relative flex flex-1 flex-col px-2 pt-10">
               <div
                 className={[
-                  "absolute -top-9 left-2 h-14 w-14 overflow-hidden rounded-full border-2",
+                  "absolute -top-10 left-2 h-16 w-16 overflow-hidden rounded-full border-2",
                   card.dark ? "border-[#111214]" : "border-[#f5f5f5]",
                 ].join(" ")}
               >
@@ -172,7 +171,6 @@ export default function Home() {
                     : "border border-black/10 bg-transparent text-black/75",
                 ].join(" ")}
               >
-                <FontAwesomeIcon icon={faPaperPlane} className="text-[16px]" />
                 Get In Touch
               </button>
             </div>
