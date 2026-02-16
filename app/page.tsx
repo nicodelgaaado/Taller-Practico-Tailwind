@@ -46,7 +46,7 @@ export default function Home() {
           >
             <div
               className={[
-                "relative h-[98px] overflow-hidden rounded-[22px]",
+                "relative h-[98px] overflow-visible rounded-[22px]",
                 card.dark
                   ? "bg-[radial-gradient(circle_at_15%_20%,#34559f,transparent_45%),radial-gradient(circle_at_75%_-20%,#ffb235,transparent_50%),linear-gradient(130deg,#1a2b55_25%,#2f3f8d_45%,#5d2ea5_70%,#15395f_100%)]"
                   : "bg-[radial-gradient(circle_at_20%_85%,#21366c,transparent_35%),radial-gradient(circle_at_52%_10%,#ffec7f,transparent_30%),radial-gradient(circle_at_75%_45%,#ff9f2a,transparent_45%),linear-gradient(120deg,#001a55_6%,#de5f28_52%,#f5d46b_95%)]",
@@ -54,7 +54,7 @@ export default function Home() {
             >
               <div
                 className={[
-                  "absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] font-semibold",
+                  "absolute -bottom-3 right-3 flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] font-semibold",
                   card.dark
                     ? "bg-[#2a2d39]/95 text-[#f2f3f5]"
                     : "bg-[#fff5e6] text-[#444]",
@@ -68,7 +68,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex flex-1 flex-col px-1 pt-7">
+            <div className="relative flex flex-1 flex-col px-1 pt-8">
               <div
                 className={[
                   "absolute -top-8 left-2 h-12 w-12 rounded-full border-2",
@@ -81,7 +81,7 @@ export default function Home() {
               <button
                 type="button"
                 className={[
-                  "absolute right-1 top-0 grid h-10 w-10 place-items-center rounded-full text-sm",
+                  "absolute right-1 top-2 grid h-9 w-9 place-items-center rounded-full text-xs",
                   card.dark
                     ? "border border-white/10 bg-white/5 text-white/80"
                     : "border border-black/10 bg-black/5 text-black/40",
@@ -91,7 +91,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faBookmarkRegular} className="text-[15px]" />
               </button>
 
-              <h2 className="min-h-[40px] whitespace-nowrap text-[32px] leading-8 font-semibold tracking-[-0.01em]">
+              <h2 className="min-h-[34px] whitespace-nowrap text-[24px] leading-6 font-semibold tracking-[-0.01em]">
                 {card.name}
               </h2>
               <p
