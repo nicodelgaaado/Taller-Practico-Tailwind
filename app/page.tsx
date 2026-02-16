@@ -17,6 +17,7 @@ export default function Home() {
       tool: "Things",
       toolIcon: faBox,
       toolIconColor: "text-[#60a5fa]",
+      avatarUrl: "https://randomuser.me/api/portraits/women/44.jpg",
       price: "$99",
       months: "12",
       dark: true,
@@ -27,6 +28,7 @@ export default function Home() {
       tool: "Sketch",
       toolIcon: faGem,
       toolIconColor: "text-[#fbbf24]",
+      avatarUrl: "https://randomuser.me/api/portraits/men/1.jpg",
       price: "$150",
       months: "24",
       dark: false,
@@ -71,12 +73,16 @@ export default function Home() {
             <div className="relative flex flex-1 flex-col px-1 pt-8">
               <div
                 className={[
-                  "absolute -top-8 left-2 h-12 w-12 rounded-full border-2",
-                  card.dark
-                    ? "border-[#111214] bg-[linear-gradient(180deg,#7d8a95,#c8d2db)]"
-                    : "border-[#f5f5f5] bg-[linear-gradient(180deg,#e2a564,#f2d3b2)]",
+                  "absolute -top-8 left-2 h-12 w-12 overflow-hidden rounded-full border-2",
+                  card.dark ? "border-[#111214]" : "border-[#f5f5f5]",
                 ].join(" ")}
-              />
+              >
+                <img
+                  src={card.avatarUrl}
+                  alt={`${card.name} profile`}
+                  className="h-full w-full object-cover"
+                />
+              </div>
 
               <button
                 type="button"
